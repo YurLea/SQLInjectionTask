@@ -27,7 +27,7 @@ def init_db():
 def safe_filter(s):
     if re.search(r'\s', s):
         return False, "Ха-ха, я запретил пробелы! Инъекцию не сделать!"
-    blacklist = ['union', 'select', 'or', 'from', 'where']
+    blacklist = ['union', 'select', 'from', 'where']
     for word in blacklist:
         if word in s:
             return False, f"Обнаружена попытка взлома! Слово '{word}' запрещено."
