@@ -17,9 +17,9 @@ def init_db():
                       note TEXT)''')
     c.execute("INSERT OR IGNORE INTO users VALUES (1, 'admin', 'SuperSecretP@ss_2026')")
     c.execute("INSERT OR IGNORE INTO users VALUES (2, 'student', 'qwerty123')")
-    c.execute("INSERT OR IGNORE INTO notes VALUES (1, 'admin', 'КТО ПРОЧИТАЛ ТОТ ЛОХ')")
     c.execute(
         "INSERT OR IGNORE INTO notes VALUES (1, 'admin', 'СЕКРЕТНЫЙ ФЛАГ ДЛЯ IDOR: flag{broken_access_control_2024}')")
+    c.execute("INSERT OR IGNORE INTO notes VALUES (1, 'admin', 'КТО ПРОЧИТАЛ ТОТ ЛОХ')")
     c.execute("INSERT OR IGNORE INTO notes VALUES (2, 'student', 'Купить молоко')")
     conn.commit()
     conn.close()
